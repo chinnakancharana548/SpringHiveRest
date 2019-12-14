@@ -1,0 +1,311 @@
+2019-11-28 09:13:14.256 ERROR 3108 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:787) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:226) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:400) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:25) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:645) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:625) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:874) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:778) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:640) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
+	at org.springframework.util.Assert.state(Assert.java:94) ~[spring-core-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:222) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:174) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:43) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:85) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_231]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_231]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_231]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_231]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 43 common frames omitted
+
+2019-11-28 09:16:00.099 ERROR 12172 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLSyntaxErrorException: Unknown database 'test'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1214) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1245) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:25) ~[classes/:na]
+
+2019-11-28 09:16:00.254 ERROR 12172 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLSyntaxErrorException: Unknown database 'test'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:333) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:320) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1249) [hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:25) ~[classes/:na]
+
+2019-11-28 09:16:00.256 ERROR 12172 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'test'
+2019-11-28 09:16:00.276 ERROR 12172 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:25) [classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:403) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:333) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:320) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1249) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 20 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'test'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.18.jar:8.0.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	... 35 common frames omitted
+
+2019-11-28 09:19:07.017 ERROR 10828 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method linkDiscoverers in org.springframework.hateoas.config.HateoasConfiguration required a single bean, but 16 were found:
+	- modelBuilderPluginRegistry: defined in null
+	- modelPropertyBuilderPluginRegistry: defined in null
+	- typeNameProviderPluginRegistry: defined in null
+	- documentationPluginRegistry: defined in null
+	- apiListingBuilderPluginRegistry: defined in null
+	- operationBuilderPluginRegistry: defined in null
+	- parameterBuilderPluginRegistry: defined in null
+	- expandedParameterBuilderPluginRegistry: defined in null
+	- resourceGroupingStrategyRegistry: defined in null
+	- operationModelsProviderPluginRegistry: defined in null
+	- defaultsProviderPluginRegistry: defined in null
+	- pathDecoratorRegistry: defined in null
+	- apiListingScannerPluginRegistry: defined in null
+	- relProviderPluginRegistry: defined by method 'relProviderPluginRegistry' in class path resource [org/springframework/hateoas/config/HateoasConfiguration.class]
+	- linkDiscovererRegistry: defined in null
+	- entityLinksPluginRegistry: defined by method 'entityLinksPluginRegistry' in class path resource [org/springframework/hateoas/config/WebMvcEntityLinksConfiguration.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2019-11-28 09:20:25.024 ERROR 11268 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method linkDiscoverers in org.springframework.hateoas.config.HateoasConfiguration required a single bean, but 16 were found:
+	- modelBuilderPluginRegistry: defined in null
+	- modelPropertyBuilderPluginRegistry: defined in null
+	- typeNameProviderPluginRegistry: defined in null
+	- documentationPluginRegistry: defined in null
+	- apiListingBuilderPluginRegistry: defined in null
+	- operationBuilderPluginRegistry: defined in null
+	- parameterBuilderPluginRegistry: defined in null
+	- expandedParameterBuilderPluginRegistry: defined in null
+	- resourceGroupingStrategyRegistry: defined in null
+	- operationModelsProviderPluginRegistry: defined in null
+	- defaultsProviderPluginRegistry: defined in null
+	- pathDecoratorRegistry: defined in null
+	- apiListingScannerPluginRegistry: defined in null
+	- relProviderPluginRegistry: defined by method 'relProviderPluginRegistry' in class path resource [org/springframework/hateoas/config/HateoasConfiguration.class]
+	- linkDiscovererRegistry: defined in null
+	- entityLinksPluginRegistry: defined by method 'entityLinksPluginRegistry' in class path resource [org/springframework/hateoas/config/WebMvcEntityLinksConfiguration.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
